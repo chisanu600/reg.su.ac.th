@@ -1,0 +1,3 @@
+function printProfile() {
+  window.print();
+}

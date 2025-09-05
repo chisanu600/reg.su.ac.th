@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ข้อมูลนักศึกษา</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      background-color: #2c4a87;
+      color: white;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .container {
+      background-color: white;
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .info-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-pair {
+      display: flex;
+    }
+
+    .info-pair b {
+      width: 200px;
+      color: #333;
+    }
+
+    .top-note {
+      float: right;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .info-table {
+        grid-template-columns: 1fr;
+      }
+      .info-pair b {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    ข้อมูลนักศึกษา (Student Information)
+    <span class="top-note">*แก้ไขข้อมูลส่วนตัว ล่าสุดวันที่ 2 กรกฎาคม 2568</span>
+  </div>
+
+  <div class="container">
+    <div class="info-table">
+      <div class="info-pair"><b>รหัสนักศึกษา:</b> 680710795</div>
+      <div class="info-pair"><b>วิธีรับเข้า:</b> สกอ. (สนง.คณะกรรมการการอุดมศึกษา)</div>
+
+      <div class="info-pair"><b>หลักสูตร:</b> 1070900000650 เทคโนโลยีสารสนเทศ</div>
+      <div class="info-pair"><b>สถานภาพนักศึกษา:</b> นักศึกษาปัจจุบัน สถานะปกติ</div>
+
+      <div class="info-pair"><b>วิชาโท:</b> -</div>
+      <div class="info-pair"><b>ปีการศึกษาที่เข้า:</b> 2568/1</div>
+
+      <div class="info-pair"><b>คณะ:</b> วิทยาศาสตร์</div>
+      <div class="info-pair"><b>วันที่เริ่มศึกษา:</b> 03 มิถุนายน 2568</div>
+
+      <div class="info-pair"><b>วิทยาเขต:</b> พระราชวังสนามจันทร์</div>
+      <div class="info-pair"><b></b></div>
+
+      <div class="info-pair"><b>ระดับการศึกษา:</b> ปริญญาตรี</div>
+      <div class="info-pair"><b></b></div>
+
+      <div class="info-pair"><b>อาจารย์ที่ปรึกษา:</b> ผู้ช่วยศาสตราจารย์ ดร.ณัฐโชติ พรหมฤทธิ์</div>
+      <div class="info-pair"><b></b></div>
+
+      <div class="info-pair"><b>ชื่อปริญญา:</b> วิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ)</div>
+      <div class="info-pair"><b></b></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ประวัตินักศึกษา | มหาวิทยาลัยศิลปากร</title>
+  <link rel="stylesheet" href="style.css"> <!-- เชื่อมไฟล์ CSS -->
+  <link rel="stylesheet" href="script.js"> <!-- JAVASCRIPT -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    /* Header */
+
+
+    .header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    /* Sidebar */
+    .header {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    }
+
+    .sidebar {
+    width: 240px;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    top: 60px; /* ไม่ให้ทับ header */
+    left: 0;
+    border-right: 1px solid #ddd;
+    z-index: 1;
+    }
+
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin: 20px;
+      color: #00796b;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      padding: 15px 20px;
+      border-left: 5px solid transparent;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .sidebar li:hover,
+    .sidebar .active {
+      background-color: #e0f2f1;
+      border-left: 5px solid #00796b;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #26a69a;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .info-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .info-pair {
+      display: flex;
+    }
+
+    .info-pair b {
+      width: 220px;
+      color: #333;
+    }
+
+    .print-button {
+      background-color: #4a90e2;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .info-table {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="header-bar">
+    <div class="left-section">
+        <img src="logo.png" alt="SU Logo" class="logo">
+        <div class="title">
+        <div>มหาวิทยาลัยศิลปากร</div>
+        <div>ระบบบริการการศึกษา</div>
+        </div>
+        <div class="menu-icon">&#9776;</div>
+    </div>
+
+    <div class="right-section">
+        <img src="flag.png" class="icon-small" alt="Thai">
+        <span class="icon">🔔</span>
+        <span class="icon">🌙</span>
+        <div class="profile">
+        <img src="profile.png" class="avatar" alt="Profile">
+        <div class="name-role">
+            <div class="name">นายชิษณุ แกนุ</div>
+            <div class="role">นักศึกษา</div>
+        </div>
+        <span class="dropdown-arrow">▼</span>
+        </div>
+    </div>
+    </div>
+
+  <div class="sidebar">
+    <h1><img src="reglogo.png" alt="reglogo" class="regsu-logo"></h1>
+    <ul>
+      <li class="non-active"><a href="index.html" style="text-decoration: none; color: rgb(138, 138, 138);">ประวัตินักศึกษา</a></li>
+      <li class="active"><a href="index21.html" style="text-decoration:none ; color: #ffff;">ข้อมูลนักศึกษา</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">เปลี่ยนรหัสผ่าน</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">ปฏิทินการศึกษา</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">ข้อมูลทะเบียน</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">ข้อมูลผลการศึกษา</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">ระบบประเมิน</a></li>
+      <li class="non-active"><a href="#" style="text-decoration:none ; color: rgb(138, 138, 138);">ยื่นคำร้อง</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="card">
+      <div class="card-header">
+        <div>ข้อมูลนักศึกษา</div>
+        <button class="print-button">🖨️ พิมพ์ข้อมูลนักศึกษา</button>
+      </div>
+
+      <!-- ใส่ข้อมูลนักศึกษาจากโค้ดเก่า -->
+      <div class="info-table">
+        <div class="info-pair"><b>รหัสนักศึกษา:</b> 670710795</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>วิธีรับเข้า:</b> สกอ. (สนง.คณะกรรมการการอุดมศึกษา)</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>หลักสูตร:</b> 1070900000650 เทคโนโลยีสารสนเทศ</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>สถานภาพนักศึกษา:</b> นักศึกษาปัจจุบัน สถานะปกติ</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>วิชาโท:</b> -</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>ปีการศึกษาที่เข้า:</b> 2567/1</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>คณะ:</b> วิทยาศาสตร์</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>วันที่เริ่มศึกษา:</b> 03 มิถุนายน 2567</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>วิทยาเขต:</b> พระราชวังสนามจันทร์</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>ระดับการศึกษา:</b> ปริญญาตรี</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>อาจารย์ที่ปรึกษา:</b> ผู้ช่วยศาสตราจารย์ ดร.ณัฐโชติ พรหมฤทธิ์</div>
+        <div class="info-pair"></div>
+
+        <div class="info-pair"><b>ชื่อปริญญา:</b> วิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ)</div>
+        <div class="info-pair"></div>
+      </div>
+      </div>
+      </div>
+  </div>
+
+  <script src="script.js"></script> <!-- เชื่อมไฟล์ JS -->
+</body>
+</html>
