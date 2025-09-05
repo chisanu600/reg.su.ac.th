@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ประวัตินักศึกษา | มหาวิทยาลัยศิลปากร</title>
-  <link rel="stylesheet" href="style.css"> <!-- เชื่อมไฟล์ CSS -->
+  <link rel="stylesheet" href="last.css"> <!-- เชื่อมไฟล์ CSS -->
   <link rel="stylesheet" href="script.js"> <!-- JAVASCRIPT -->
 </head>
 <body>
@@ -47,31 +47,81 @@
   </div>
 
   <div class="main-content">
-    <div class="header">
-      <h2><p>ประวัตินักศึกษา</p></h2>
-      <button onclick="printProfile()">🖨️ พิมพ์ประวัตินักศึกษา</button>
+    <div class="top-bar">
+    <div class="title-area">
+      <h2>ประวัตินักศึกษา</h2>
+        <div class="breadcrumb">
+  <a href="#">หน้าแรกนักศึกษา</a> > <span>ประวัตินักศึกษา</span>
+</div>
+
+<div class="main-header">
+  <div class="main-header-left">
+    <h2 class="page-title">ประวัตินักศึกษา</h2>
+    <div class="header-actions">
+      <button class="active-btn">ประวัตินักศึกษา</button>
+      <button class="secondary-btn">แก้ไขข้อมูลส่วนตัว</button>
+    </div>
+  </div>
+  
+</div>
+  </div>
+        <div class="profile-card">
+  <div class="profile-header" >
+    <div class="section-title">ข้อมูลส่วนตัว (Personal Information)</div>
+    <div class="edit-date">*แก้ไขข้อมูลส่วนตัว ล่าสุดวันที่ 2 กรกฎาคม 2568</div>
+  </div>
+
+  <div class="profile-wrapper">
+    <!-- ตารางข้อมูล -->
+    <div class="info-table">
+      <table>
+        <tr>
+          <td class="label">ชื่อ - สกุล (ไทย):</td>
+          <td>ชิษณุ แกนุ</td>
+        </tr>
+        <tr>
+          <td class="label">ชื่อ - สกุล (อังกฤษ):</td>
+          <td>Chitsanu Kaenu</td>
+        </tr>
+        <tr>
+          <td class="label">วัน/เดือน/ปีเกิด:</td>
+          <td>04 มกราคม 2548</td>
+        </tr>
+        <tr>
+          <td class="label">สัญชาติ:</td>
+          <td>ไทย</td>
+        </tr>
+        <tr>
+          <td class="label">ศาสนา:</td>
+          <td>พุทธ</td>
+        </tr>
+        <tr>
+          <td class="label">หมู่เลือด:</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td class="label">เบอร์โทรศัพท์:</td>
+          <td>0838374064</td>
+        </tr>
+        <tr>
+          <td class="label">อีเมล:</td>
+          <td>soulsosoil@gmail.com</td>
+        </tr>
+        <tr>
+          <td class="label">ที่อยู่ (ทะเบียนบ้าน):</td>
+          <td>12หมู่6 หมู่บ้านพร้าวหนุ่ม ช่างเคิ่ง แม่แจ่ม เชียงใหม่ 50270</td>
+        </tr>
+      </table>
     </div>
 
-    <div class="profile-card">
-      <div class="section-title">ข้อมูลส่วนตัว (Personal Information)</div>
-      <div class="profile-info">
+    <!-- รูปนักศึกษา -->
+    <div class="profile-photo">
+      <img src="profile.png" alt="student photo">
+    </div>
+  </div>
+</div>
+
         
-        <div class="info-table">
-          <table>
-            <tr><td class="label">ชื่อ - สกุล (ไทย):</td><td>ชิษณุ แกนุ</td></tr>
-            <tr><td class="label">ชื่อ - สกุล (อังกฤษ):</td><td>Chitsanu Kaenu</td></tr>
-            <tr><td class="label">วัน/เดือน/ปีเกิด:</td><td>04 มกราคม 2548</td></tr>
-            <tr><td class="label">สัญชาติ:</td><td>ไทย</td></tr>
-            <tr><td class="label">ศาสนา:</td><td>พุทธ</td></tr>
-            <tr><td class="label">หมู่เลือด</td><td></td></tr>
-            <tr><td class="label">เบอร์โทรศัพท์</td><td>0838374064</td></tr>
-            <tr><td class="label">อีเมล:</td><td>soulsosoil@gmail.com</td></tr>
-            <tr><td class="label">ที่อยู่ (ทะเบียนบ้าน):</td><td>12หมู่ที่6 หมู่บ้านพร้าวหนุ่ม ช่างเคิ่ง แม่แจ่ม เชียงใหม่ 50270</td></tr>
-          </table>
-        </div>
-        <div class="profile-photo">
-          <img src="profile.png" alt="Student Photo">
-        </div>
       </div>
     </div>
   </div>
